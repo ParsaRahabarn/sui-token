@@ -1,0 +1,23 @@
+{
+  "name": "counter",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "sui move start --path ./counter/",
+    "build": "sui move build --path ./counter/",
+    "local-net": "RUST_LOG=\"off,sui_node=info\" sui start --with-faucet --force-regenesis",
+    "test": "jest --verbose"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.8",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.2",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@mysten/dapp-kit": "^0.15.0",
+    "@mysten/sui": "^1.24.0"
+  }
+}
