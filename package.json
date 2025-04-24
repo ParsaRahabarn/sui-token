@@ -1,9 +1,10 @@
 {
-  "name": "counter",
+  "name": "token",
   "version": "0.0.1",
   "scripts": {
-    "start": "sui move start --path ./counter/",
-    "build": "sui move build --path ./counter/",
+    "deploy": "sui client publish --gas-budget 30000000 ./token --skip-dependency-verification",
+    "faucet": "sui client faucet",
+    "build": "sui move build --path ./token/",
     "local-net": "RUST_LOG=\"off,sui_node=info\" sui start --with-faucet --force-regenesis",
     "test": "jest --verbose"
   },
